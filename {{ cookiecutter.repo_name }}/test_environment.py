@@ -1,9 +1,8 @@
-import sys
+# import sys
 
-REQUIRED_PYTHON = "{{ cookiecutter.python_interpreter }}"
 
-if True:
-    raise NotImplementedError()
+# if True:
+#     raise NotImplementedError()
 
 # def main():
 #     system_major = sys.version_info.major
