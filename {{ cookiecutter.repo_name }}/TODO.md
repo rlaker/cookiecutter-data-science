@@ -1,0 +1,4 @@
+- [ ] pyproject.toml
+- [ ] mdocs
+- [ ] makefile
+- [ ] template for presentations?
