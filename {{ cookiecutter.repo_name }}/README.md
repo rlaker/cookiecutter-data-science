@@ -3,6 +3,11 @@
 
 {{cookiecutter.description}}
 
+Installation
+------------
+
+WRITE UP HOW TO INSTALL AND KEEP TRACK OF DEPENDENCIES
+
 Project Organization
 ------------
 
@@ -20,16 +25,18 @@ Project Organization
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │   ├── exploratory    <- Quick exploration of data
+    |   └── reports        <- More mature documents that create a repeated output
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   ├── understand     <- Finalised analysis pieces on a certain area
+    │   ├── presentations  <- Presentation files with the date at the start, e.g. 24_02_06_title
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── environment.yaml   <- Conda environment file for reproducing the analysis environment.
+    ├── requirements.txt   <- Installs the local package in -e mode and any non-conda packages
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
