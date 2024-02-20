@@ -7,6 +7,8 @@ Based off this [original cookiecutter](http://drivendata.github.io/cookiecutter-
 - added pre-commit 
 - using conda instead of virualenv
 
+> NOTE: I have not yet figured out how to use s3 and aws_profile options but plan to include in the future 
+
 Also borrowed some ideas from this [R cookiecutter](https://github.com/sparklabnyc/cookiecutter-r-project)
 
 
