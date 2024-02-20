@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypkg"
+version = '0.1.0'
+authors = [
+    {name = "{{ cookiecutter.author_name }}"},
+]
+description = "{{ cookiecutter.description }}"
+readme = "README.md"
+{% if cookiecutter.open_source_license == 'MIT' %}
+license = {text = "MIT"}
+{% elif cookiecutter.open_source_license == 'BSD-3-Clause' %}
+license = {text = "BSD-3-Clause"}
+{% endif %}
+

@@ -3,6 +3,18 @@
 
 {{cookiecutter.description}}
 
+Installation
+------------
+
+Just run `make environment` to create the conda environment, or `conda env create -f environment.yaml` if you don't have make.
+
+Adding dependencies
+------------
+
+It is best practice to write the new dependency in the `environment.yaml` or `requirements.txt` file and then run
+    
+    conda env update -f environment.yml
+
 Project Organization
 ------------
 
@@ -15,41 +27,42 @@ Project Organization
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    │   ├── exploratory    <- Quick exploration of data
+    |   └── reports        <- More mature documents that create a repeated output
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   ├── understand     <- Finalised analysis pieces on a certain area
+    │   ├── presentations  <- Presentation files with the date at the start, e.g. 24_02_06_title
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
+    ├── environment.yaml   <- Conda environment file for reproducing the analysis environment.
+    ├── requirements.txt   <- Installs the local package in -e mode and any non-conda packages
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    ├── pyproject.toml     <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
+    │   └── mypkg/
+    │       __init__.py    <- Makes src a Python module
+    │       │
+    │       ├── data       <- Scripts to download or generate data
+    │       │   └── make_dataset.py
+    │       │
+    │       ├── features   <- Scripts to turn raw data into features for modeling
+    │       │   └── build_features.py
+    │       │
+    │       ├── models     <- Scripts to train models and then use trained models to make
+    │       │   │                 predictions
+    │       │   ├── predict_model.py
+    │       │   └── train_model.py
+    │       │
+    │       └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │           └── visualize.py
     │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── docs               <- Documentation from either make docs_md or docs_html
 
 
 --------

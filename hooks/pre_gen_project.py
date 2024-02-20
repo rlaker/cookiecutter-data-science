@@ -1,3 +1,11 @@
+import subprocess
+
+subprocess.call(['git', 'init', "--initial-branch=main"])
+subprocess.call(['git', 'add', '.'])
+# subprocess.call(['git', 'commit', '-m', 'Initial commit'])
+subprocess.call(['pre-commit', 'install'])
+
+
 def deprecation_warning():
     print("""
 
@@ -19,4 +27,7 @@ For example:
     """)
 
 
-deprecation_warning()
+# deprecation_warning()
+print("")
+print("Create the environment by running:")
+print("make environment")

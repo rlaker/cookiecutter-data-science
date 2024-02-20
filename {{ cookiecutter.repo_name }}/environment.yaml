@@ -1,0 +1,15 @@
+name: {{ cookiecutter.project_name }}
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - plotly
+  - ipykernel
+  - pip:
+    - -r requirements.txt
