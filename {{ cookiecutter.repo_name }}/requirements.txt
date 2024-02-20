@@ -3,5 +3,6 @@
 
 # external requirements
 pyathena
+trino
 pdoc3
 python-dotenv
