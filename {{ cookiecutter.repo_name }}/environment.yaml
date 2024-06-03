@@ -11,5 +11,6 @@ dependencies:
   - matplotlib
   - plotly
   - ipykernel
+  - nbformat
   - pip:
     - -r requirements.txt
