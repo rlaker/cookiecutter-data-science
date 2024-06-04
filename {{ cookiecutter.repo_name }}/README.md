@@ -13,7 +13,7 @@ Adding dependencies
 
 It is best practice to write the new dependency in the `environment.yaml` or `requirements.txt` file and then run
     
-    conda env update -f environment.yml
+    conda env update -f environment.yaml
 
 Project Organization
 ------------
